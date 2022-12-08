@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГЛАВНАЯ</title>
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+    <!--google font-->
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_package/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_package/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_package/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon_package/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!--favicon-->
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--bootstrap-->
+    <!--font awesome-->
+    <link rel="stylesheet" href="css/all.css">
+    <!--font awesome-->
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!--font awesome cdn link-->
+    <!--style css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--style css-->
+    <!--swiper slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!--swiper slider-->
+</head>
+<body>
+
+    <!--navbar and subheader-->
+
+    <header>
+        <div class="subheader">
+            <div class="subheader_block col-2">
+                <a href="en/enindex.html" id="sub_phone" class="translate_mobile">en</a>
+            </div>
+
+            <div class="subheader_block col-3" id="phone_none">
+                <div class="subheader_string">г. Шадринск</div>
+                <div class="subheader_string">ул. Февральская 105</div>
+            </div>
+
+            <div class="subheader_logo col-4">
+                <div class="subheader_logo_img">
+                    <img src="img/logo/logo_subheader.png" alt="">
+                </div>
+                <div class="adress_adaptiv" id="laptop_none">г. Шадринск, ул. Февральская 105</div>
+            </div>
+            
+
+            <div class="subheader_block col-3" id="phone_none">
+                <a href="tel:" id="sub_phone">+7 (951) 268-82-61</a>
+                <a href="" id="sub_phone">забронировать</a>
+            </div>
+            
+            
+            
+        </div>
+        
+        
+
+        <input type="checkbox" name="" id="nav-toggler" class="fas fa-bars"> 
+
+        
+
+        <nav class="navbar">
+       
+            <a href="index.html" data-text="главная">главная</a>
+            <a href="menu.html" data-text="меню">меню</a>
+            <a href="services.html" data-text="сервис">сервис</a>
+            <a href="news.html" data-text="новости">новости</a>
+            <a href="contacts.html" data-text="контакты">контакты</a>
+        
+        <div class="background-image"></div>
+        </nav>
+    </header>
+
+    <!--navbar and subheader-->
+
+    <!--phone-->
+    <div class="multibutton" id="none_notepad">
+        <a href="tel: +7(904)-494-66-14">
+        <div class="multibutton__button">
+            <i class="fa-solid fa-phone"></i>
+        </div>
+    </a>
+    </div>
+    <!--phone-->
+
+    <!--slider about -->
+    <section class="slider_about">
+        <div class="div" id="hero">
+            <div class="contaner">
+                <div class="info">
+                    <h2>РОЛЬ ПРАВОСЛАВИЯ В ИСТОРИИ РОССИИ</h2>
+                    <p>Добро пожаловать на авторский курс Валерия Масликова</p>
+                </div>
+            </div>
+        
+            <div class="slider">
+                <div id="arrow_slider"><i class="fa-solid fa-angle-left" id="prev"></i></div>
+                <div class="preview">
+                    <img src="img/home_fon/war.jpg" alt="" class="active thumbnail" >
+                    <img src="img/home_fon/dalmat.jpg" alt="" class="thumbnail">
+                    <img src="img/home_fon/krest.jpg" alt="" class="thumbnail">
+                    <img src="img/home_fon/mongol.jpg" alt="" class="thumbnail">
+                    <img src="img/home_fon/petr.jpg" alt="" class="thumbnail">
+                </div>
+                <div id="arrow_slider"><i class="fa-solid fa-angle-right" id="next"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+        var thumbnail = document.getElementsByClassName("thumbnail");
+        var hero = document.getElementById("hero");
+
+        var backgroundImg = new Array(
+            "img/home_fon/war.jpg",
+            "img/home_fon/dalmat.jpg",
+            "img/home_fon/krest.jpg",
+            "img/home_fon/mongol.jpg",
+            "img/home_fon/petr.jpg",
+        );
+        let i = 0;
+        next.onclick = function(){
+
+            if(i < 4){
+            hero.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+            thumbnail[i+1].classList.add("active");
+            thumbnail[i].classList.remove("active");
+            i ++;
+            }
+        }
+        prev.onclick = function(){
+
+        if(i > 0){
+        hero.style.backgroundImage = 'url("'+backgroundImg[i-1]+'")';
+        thumbnail[i-1].classList.add("active");
+        thumbnail[i].classList.remove("active");
+        i --;
+            }
+        }
+    </script>
+    <!--slider about -->
+
+  
+
+    <!--count-->
+        <section class="count">
+            <div class="box_container">
+
+                <div class="box_count rooms_adaptiv">
+                    <p>8</p>
+                    <h3>разделов</h3>
+                </div>
+
+                <div class="box_count">
+                    <p>интеллектуальные карты</p>
+                    <h3>и подробные конспекты занятий</h3>
+                </div>
+
+            </div>
+        </section> 
+    <!--count-->
+
+    <!--count-->
+    <section class="count">
+        <div class="box_container" style="margin-left: -30px; margin-top: -20px;">
+           
+            <div class="box_count">
+                <p>17</p>
+                <h3>занятий</h3>
+            </div>
+
+            <div class="box_count">
+                <p>ПОДГОТОВКА К ЕГЭ</p>
+                <h3>и домашняя работа</h3>
+            </div>
+
+        </div>
+    </section> 
+    <!--count-->
+
+    <!--секции-->
+    <section class="steps">
+        <div class="wrapper">
+            <h2>ПОЛНЫЙ КУРС + РАЗБОР ЗАДНИЙ ЕГЭ</h2>
+            <p class="step-texts">
+                Данная программа, в первую очередь, призвана помочь построить учащимся четкую структурированную хронологическую последовательность истории православной церкви. 
+            </p>
+            <p class="step-texts mbtext">
+                Тем самым, они смогут избежать простого заучивания огромного количества хаотичной информации, а будут прибегать к помощи современных методик работы с информацией, что позволит им устанавливать причинно-следственные связи истории православной церкви с историей Российского государства и общества.
+            </p>
+            <div class="steps-container">
+                <div class="step-block" id="stepbl1">
+                    <p class="step-num">01</p>
+                    <h4 class="steph4"><span>01</span>КРЕЩЕНИЕ РУСИ <br>
+                    ОРГАНИЗАЦИЯ ЦЕРКВИ</h4>
+                    <p class="stepP">вводный раздел</p>
+                </div>
+                <div class="step-block" id="stepbl2">
+                    <p class="step-num">02</p>
+                    <h4 class="steph4"><span>02</span>РУССКАЯ ПРАВОСЛАВНАЯ ЦЕРКОВЬ В XI -XII в.</h4>
+                    <a href="lessson.html"><p class="stepP">РАЗДЕЛ ЗАКРЫТ</p></a>
+                </div>
+                <div class="step-block" id="stepbl3">
+                    <p class="step-num">03</p>
+                    <h4 class="steph4"><span>03</span>ЦЕРКОВЬ В ЭПОХУ РАЗДРОБЛЕННОСТИ</h4>
+                    <p class="stepP">РАЗДЕЛ ЗАКРЫТ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="steps">
+        <div class="wrapper">
+            <div class="steps-container">
+                <div class="step-block" id="stepbl1">
+                    <p class="step-num">04</p>
+                    <h4 class="steph4"><span>04</span>МОСКВА - ТРЕТИЙ РИМ</h4>
+                    <p class="stepP">РАЗДЕЛ ЗАКРЫТ</p>
+                </div>
+                <div class="step-block" id="stepbl2">
+                    <p class="step-num">05</p>
+                    <h4 class="steph4"><span>05</span>МОСКОВСКИЙ ПАТРИАРХАТ В ПЕРИОД ЕДИНОГО РУССКОГО ЦАРСТВА</h4>
+                    <p class="stepP">РАЗДЕЛ ЗАКРЫТ</p>
+                </div>
+                <div class="step-block" id="stepbl3">
+                    <p class="step-num">06</p>
+                    <h4 class="steph4"><span>06</span>СИНОДАЛЬНЫЙ ПЕРИОД</h4>
+                    <a href="lessson.html"><p class="stepP">ОТКРЫТЬ</p></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="steps">
+        <div class="wrapper">
+            <div class="steps-container">
+                <div class="step-block" id="stepbl1">
+                    <p class="step-num">07</p>
+                    <h4 class="steph4"><span>07</span>ЦЕРКОВЬ В XX ВЕКЕ</h4>
+                    <p class="stepP">РАЗДЕЛ ЗАКРЫТ</p>
+                </div>
+                <div class="step-block" id="stepbl2">
+                    <p class="step-num">08.1</p>
+                    <h4 class="steph4"><span>02</span>ИСТОРИЯ ВЕКОВ</h4>
+                    <p class="stepP">ЭКСКУРСИЯ В УСПЕНСКИЙ ДАЛМАТОВСКИЙ МОНАСТЫРЬ</p>
+                </div>
+                <div class="step-block" id="stepbl3">
+                    <p class="step-num">08.2</p>
+                    <h4 class="steph4"><span>03</span>ИСТОРИЯ ВЕКОВ</h4>
+                    <p class="stepP">ЗАЩИТА ПРОЕКТОВ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--секции-->
+
+    <!--delivery -->
+    <section class="delivery">
+        <div class="delivery_content">
+            <div class="delivery_left">
+                <div class="delivery_img_left">
+                    <img src="img/mindmapping/svecha.png" alt="" class="delivery_img1" >
+                </div>
+                <div class="delivery_img_right">
+                    
+                    <img src="img/mindmapping/pop.png" alt="" class="delivery_img2 delivery_non_540" style="margin-left: 80px;">
+
+                    <img src="img/mindmapping/petr.png" alt="" class="delivery_img2 delivery_non_280" style="width: 360px;">
+                </div>
+            </div>
+
+            <div class="delivery_right">
+                <div class="delivery_title">
+                    <h3>MIND MAPPING</h3>
+                </div>
+                <div class="delivery_text">
+                    <p> Создавайте неограниченное количество тем и добавьте цвета для ясности и стиля. По мере формирования карты добавляйте контекст к темам с помощью вложений, встроенных медиафайлов и многого другого. Функции <a href="https://www.mindmeister.com/ru">MindMeister</a> помогут вам создать ваши первые интеллект-карты с максимальной креативностью.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--delivery -->
+
+    <!--literatura-->
+    <section class="home-packages">
+
+        <h1 class="news-title"> ЛИТЕРАТУРА </h1>
+    
+        <div class="boxa-container">
+    
+             <div class="boxa">
+                <div class="image">
+                   <img src="img/lit/kluchevski.jpg" alt="">
+                </div>
+                <div class="content">
+                   <h3>Василий Осипович Ключевский</h3>
+                      <a href="https://azbyka.ru/otechnik/Vasilij_Klyuchevskij/kurs-russkoj-istorii/" class="btn-about">подробнее</a>
+                </div>
+             </div>
+      
+            <div class="boxa">
+               <div class="image">
+                  <img src="img/lit/karamsin.jpg" alt="" >
+               </div>
+               <div class="content">
+                  <h3>Николай Михайлович Карамзин</h3>
+                     <a href="https://azbyka.ru/otechnik/Nikolaj_Karamzin/istorija-gosudarstva-rossijskogo/" class="btn-about">подробнее</a>
+               </div>
+            </div>
+            
+            <div class="boxa">
+                <div class="image">
+                   <img src="img/lit/bulgacov.jpg" alt="" >
+                </div>
+                <div class="content">
+                   <h3>Митрополит Макарий</h3>
+                      <a href="https://azbyka.ru/otechnik/Makarij_Bulgakov/istorija-russkoj-tserkvi/" class="btn-about">подробнее</a>
+                </div>
+             </div>
+      
+         </div>
+    
+        <div class="boxa-container">
+     
+            <div class="boxa" >
+               <div class="image">
+                  <img src="img/lit/kart.jpg" alt="">
+               </div>
+               <div class="content">
+                 <h3>Карташев Антон Владмирович</h3>
+                 <a href="https://azbyka.ru/otechnik/Anton_Kartashev/ocherki-po-istorii-russkoj-tserkvi-tom-1/" class="btn-about">подробнее</a>
+               </div>
+            </div>
+      
+            <div class="boxa">
+               <div class="image">
+                  <img src="img/lit/Platonov_SF.jpg" alt="">
+               </div>
+               <div class="content">
+                  <h3>Платонов Сергей Федорович</h3>
+                     <a href="http://russian-history.info/wp-content/uploads/2019/05/Платонов-С.-Ф.-«Полный-курс-лекций-по-русской-истории».pdf" class="btn-about">подробнее</a>
+               </div>
+            </div>
+            
+          
+            <div class="boxa">
+                <div class="image">
+                   <img src="img/lit/original.jpg" alt="">
+                </div>
+                <div class="content">
+                   <h3>Андрей Ильич Фурсов</h3>
+                      <a href="https://www.youtube.com/watch?v=di5LUCf96g4&list=PLKgvdx0z531s6URnGrrGluDE3J7SY_RPg" class="btn-about">подробнее</a>
+                </div>
+             </div>
+         </div>   
+     
+     </section>
+    <!--literatura-->
+
+    <!--footer-->
+    <footer>
+        <div class="block">
+            <ul class="social">
+                <div class="item_margin">
+                <li class="social_item vk"><i class="fa-brands fa-vk"></i></li>
+                </div>
+                <div class="item_margin">
+                <li class="social_item viber"><i class="fa-brands fa-viber"></i></li>
+                </div>
+                <div class="item_margin">
+                <li class="social_item envelope"><i class="fa-brands fa-telegram"></i></li>
+                </div>
+                <div class="item_margin">
+                <li class="social_item whatsapp"><i class="fa-brands fa-whatsapp"></i></li>
+                </div>
+                <div class="item_margin">
+                <li class="social_item instagram"><i class="fa-brands fa-instagram"></i></li>
+                </div>
+            </ul>
+        </div>
+     </footer>
+     <!--footer-->
+
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    
+    <!--gallery -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic) {
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic
+        }
+        function closeFullImg () {
+            fullImgBox.style.display = "none";
+        }
+    </script>
+    <!--gallery -->
+
+</body>
+</html>
